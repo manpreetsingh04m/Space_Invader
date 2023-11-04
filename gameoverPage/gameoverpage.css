@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.body{
+  background-image: url(../Assets/GameOver\ Page.png);
+}
+#gameover{
+margin-top: 250px;
+}
+#gameover_text{
+  color: #FFF;
+text-align: center;
+text-shadow: 0px 2px 12px #FF517B, 0px 2px 44px #FF003D, 0px 2px 44px #FF008A;
+font-family: 'Press Start 2P', cursive;
+font-size: 137px;
+font-style: normal;
+font-weight: 400;
+line-height: 48px; /* 35.036% */
+letter-spacing: -5.48px;
+filter: blur(0.5px);
+}
+#score{
+  margin-top: 200px;
+  text-align: center;
+}
+#score_text{
+  color: #ADFFC9;
+  text-align: center;
+  text-shadow: 0px 2px 12px #8FFF00, 0px 2px 44px #BDFF00;
+font-family: 'Press Start 2P', cursive;
+  font-size: 49px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px; /* 97.959% */
+  filter: blur(0.5px);
+}
+#score_number{
+  color: #ADFFC9;
+  text-align: center;
+font-family: 'Press Start 2P', cursive;
+text-shadow: 0px 2px 12px #8FFF00, 0px 2px 44px #BDFF00;
+  font-size: 49px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px; /* 97.959% */
+  filter: blur(0.5px);
+}
+#play_again{
+  color: #00E0FF;
+  margin-top: 100px;
+text-align: center;
+font-family: 'Press Start 2P', cursive;
+text-shadow: 0px 2px 12px #00E0FF, 0px 2px 44px #00E0FF;
+font-size: 45px;
+font-style: normal;
+font-weight: 400;
+line-height: 48px; /* 106.667% */
+filter: blur(0.5px);
+cursor: pointer;
+}

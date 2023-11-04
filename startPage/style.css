@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.body{
+  background-image: url(../Assets/start\ page\ .png);
+  font-family: 'Press Start 2P', cursive;
+  
+
+}
+#space{
+  color: #FFABBA;
+
+  text-align: center;
+  text-shadow: 0px 2px 12px #FF517B, 0px 2px 44px #FF003D, 0px 2px 44px #FF008A;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 180px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  filter: blur(0.5px);
+}
+#invader{
+  color: #ADFFC9;
+  text-align: center;
+  text-shadow: 0px 2px 12px #8FFF00, 0px 2px 44px #BDFF00;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 145px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px; 
+  filter: blur(0.5px);
+}
+#space_Invader_Text{
+  width: 1146px;
+  height: 394px;
+  margin-left: 190px;
+  margin-top: 300px;
+}
+#touch_anywhere_text{
+margin-left: 500px;
+}
+#touch_anywhere_to_start{
+  display: flex;
+width: 514px;
+height: 113px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #FFF;
+text-align: center;
+font-family: Press Start 2P;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 80.2%; /* 16.04px */
+}

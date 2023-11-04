@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.body{
+  background-image: url(../Assets/instruction\ Page.png);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
+#instruction_heading{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin-top: 100px;
+}
+#instruction_text{
+  color: #FFF;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+
+  color: #FFF;
+text-align: center;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 80.2%; /* 32.08px */
+}
+.instruction_All{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 455px;
+}
+#instuction1{
+width: 760px;
+height: auto;
+display: flex;
+width: 622px;
+height: 129px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+margin-top: 20px;
+
+}
+#instuction1_text{
+  color: #FFF;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 14.436px */
+}
+#left_Arrow{
+  position: absolute;
+    margin-top: 35px;
+    margin-left: 299px;
+}
+
+#right_arrow{
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 405px;
+}
+#instuction2{
+  width: 760px;
+  height: auto;
+  /* display: flex; */
+  width: 622px;
+  height: 129px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+margin-top: 15px;
+}
+#instuction2_text{
+  color: #FFF;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 14.436px */
+}
+#instuction3{
+  width: 760px;
+  height: auto;
+  /* display: flex; */
+  width: 622px;
+  height: 129px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+margin-top: 15px;
+}
+#instuction3_text{
+  color: #FFF;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 14.436px */
+}

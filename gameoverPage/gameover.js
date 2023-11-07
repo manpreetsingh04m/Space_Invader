@@ -3,7 +3,7 @@ play_again.addEventListener("click", function () {
     // Removing the previous score from session storage
     sessionStorage.removeItem('score');
     // Redirect to the game page main
-    window.location.href = "../gamemainPage/game.html";
+    window.location.href = "../levelChoosing/levelChoosing.html";
 });
 
 var score_number = document.getElementById("score_number");

@@ -4,19 +4,41 @@ import MovingDirection from "./MovingDirection.js";
 // Assigning score =0 
 let score =0;
 
-let defaultx=3
-let defaulty=3
+let defaultx
+let defaulty
+
+
+var selectedLevel = localStorage.getItem("level");
+switch(selectedLevel){
+  case "easy":{
+    defaultx=1
+    defaulty=1
+
+    break;
+  }
+  case "medium":{
+    defaultx=3
+    defaulty=2
+   
+    break;
+  }
+  case "hard":{
+    defaultx=6
+    defaulty=4
+  }
+}
+
 // Making a export class 
 export default class EnemyController{
 // Enemy Mapping on the draw screen in form of 2d array
-  enemyMap = [
-    [2 ,1, 2, 1, 3, 3, 2, 1, 2, 1,2],
-    [1, 2, 1, 2, 3, 3, 1, 2, 1, 2,2],
-    [2, 1, 2, 1, 3, 3, 2, 1, 2, 1,2],
-    [1, 2, 1, 2, 3, 3, 1, 2, 1, 2,2],
-    [2, 1, 2, 1, 3, 3, 2, 1, 2, 1,2],
-    [1, 2, 1, 2, 3, 3, 1, 2, 1, 2,2],
-  ];
+enemyMap = [
+  [2 ,1, 2, 1, 3, 3, 2, 1, 2, 1],
+  [1, 2, 1, 2, 3, 3, 1, 2, 1, 2],
+  [2, 1, 2, 1, 3, 3, 2, 1, 2, 1],
+  [1, 2, 1, 2, 3, 3, 1, 2, 1, 2],
+  [2, 1, 2, 1, 3, 3, 2, 1, 2, 1],
+  [1, 2, 1, 2, 3, 3, 1, 2, 1, 2],
+];
 // It represent one row of the enemies 
   enemyRow = [];
 // Representing the current Direction of the enemy array 
@@ -78,7 +100,7 @@ export default class EnemyController{
       });
     });
     if(score==60){
-      window.open("../winPage/winPage.html",)
+      window.open("../winPage/winPage.html","_self")
     }
   }
 

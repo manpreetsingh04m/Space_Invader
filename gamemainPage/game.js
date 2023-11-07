@@ -2,14 +2,24 @@
 import EnemyController from "./EnemyController.js";
 import Player from "./player.js";
 import BulletController from "./BulletController.js";
-let level="easy"
+var selectedLevel = localStorage.getItem("level");
 let a
 let b
-switch(level){
-  case "easy":
-    a=10
+switch(selectedLevel){
+  case "easy":{
+    a=15
     b=5
-
+    break;
+  }
+  case "medium":{
+    a=10
+    b=7
+    break;
+  }
+  case "hard":{
+    a=100
+    b=10
+  }
 }
 
 // Get the canvas and 2D rendering context

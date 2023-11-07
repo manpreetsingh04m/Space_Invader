@@ -3,8 +3,9 @@ export default class Enemy {
   constructor(x, y, imageNumber) {
     this.x = x;
     this.y = y;
-    this.width = 70;
-    this.height = 60;
+
+    this.width = window.visualViewport.width/20;
+    this.height = window.visualViewport.width/25;
     this.image = new Image();
     this.image.src = `../Assets/enemy${imageNumber}.gif`;
   }

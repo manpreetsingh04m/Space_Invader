@@ -11,8 +11,8 @@ export default class Player{
 
     this.x = this.canvas.width / 2;
     this.y = this.canvas.height - 130;
-    this.width=100
-    this.height=120
+    this.width=window.visualViewport.width/13
+    this.height=window.visualViewport.width/12
     this.image=new Image();
     this.image.src= "../Assets/spaceship.pod_ 1.png";
 

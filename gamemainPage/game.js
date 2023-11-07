@@ -32,11 +32,14 @@ const heart2 = document.getElementById("img2");
 const heart3 = document.getElementById("img3");
 
 // Set canvas dimensions and create a background image
-canvas.width = 1495;
-canvas.height = 840;
+
+let deviceWidth = window.visualViewport.width;
+let deviceHeight = window.visualViewport.height;
+canvas.width = deviceWidth-20;
+canvas.height = deviceHeight-20;
 const background = new Image();
 background.src = "../Assets/Game page image.png";
-
+// console.log(window.width());
 // Create instances of the BulletController, Player, and EnemyController
 const playerBulletController = new BulletController(canvas, a, "#F6AA63", true);
 const enemyBulletController = new BulletController(canvas, b, "white", false);

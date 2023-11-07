@@ -193,7 +193,7 @@ moveDown(newDirection){
       row.forEach((enemyNumber, enemyIndex)=>{
         if(enemyNumber > 0){
           this.enemyRow[rowIndex].push(
-            new Enemy(enemyIndex * 90, rowIndex * 55, enemyNumber)
+            new Enemy(enemyIndex * window.visualViewport.width/16.5, rowIndex * window.visualViewport.width/27, enemyNumber)
           )
         }
       })

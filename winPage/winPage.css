@@ -1,0 +1,41 @@
+.body{
+  background-image: url(../Assets/Background\ Image\ winpage.png);
+}
+#won{
+  color: #FFF;
+  margin-top: 220px;
+text-align: center;
+text-shadow: 0px 2px 12px #FF517B, 0px 2px 44px #FF003D, 0px 2px 44px #FFF500;
+font-family: 'Press Start 2P', cursive;
+font-size: 137px;
+font-style: normal;
+font-weight: 400;
+line-height: 48px; /* 35.036% */
+letter-spacing: -5.48px;
+filter: blur(0.5px);
+}
+#enemy_kill_text{
+  color: #ADFFC9;
+  margin-top: 200px;
+text-align: center;
+text-shadow: 0px 2px 12px #8FFF00, 0px 2px 44px #BDFF00;
+font-family: 'Press Start 2P', cursive;
+font-size: 33px;
+font-style: normal;
+font-weight: 400;
+line-height: 48px; /* 145.455% */
+filter: blur(0.5px);
+}
+#Play_again_button{
+  color: #00E0FF;
+  margin-top: 170px;
+text-align: center;
+text-shadow: 0px 2px 12px #00E0FF, 0px 2px 44px #00E0FF;
+font-family: 'Press Start 2P', cursive;
+font-size: 45px;
+font-style: normal;
+font-weight: 400;
+line-height: 48px; /* 106.667% */
+filter: blur(0.5px);
+cursor: pointer;
+}

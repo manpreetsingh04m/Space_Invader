@@ -1,0 +1,27 @@
+.body{
+  background-image: url(../Assets/LevelChoosingBackgrund.png);
+}
+.container{
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+margin-top: 250px;
+}
+#easy_img{
+  width: 340.041px;
+  height: 340.041px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+#medium_img{
+  width: 340.041px;
+  height: 340.041px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+#hard_img{
+  width: 340.041px;
+  height: 340.041px;
+  flex-shrink: 0;
+  cursor: pointer;
+}

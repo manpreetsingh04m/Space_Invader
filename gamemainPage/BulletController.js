@@ -15,6 +15,23 @@ export default class BulletController {
     this.shootSound.volume = 0.5;
   }
 
+  
+  // shoot(x, y, velocity, timeTillNextBulletAllowed = 0) {
+  //   if (
+  //     this.timeTillNextBulletAllowed <= 0 &&
+  //     this.bullets.length < this.maxBulletAtOneTime
+  //   ) {
+  //     const bullet = new Bullet(this.canvas, x, y, velocity, this.bulletColor);
+  //     this.bullets.push(bullet);
+  //     if (this.soundEnable) {
+  //       this.shootSound.currentTime = 0;
+  //       this.shootSound.play();
+  //     }
+  //     this.timeTillNextBulletAllowed = timeTillNextBulletAllowed;
+  //   }
+  // }
+
+
   // Draw bullets on the canvas and remove out-of-bounds bullets
   draw(ctx) {
     this.bullets = this.bullets.filter(

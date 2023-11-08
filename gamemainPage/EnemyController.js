@@ -9,6 +9,9 @@ let defaulty
 
 
 var selectedLevel = localStorage.getItem("level");
+
+// Switch case used for level 
+
 switch(selectedLevel){
   case "easy":{
     defaultx=1
@@ -24,7 +27,7 @@ switch(selectedLevel){
   }
   case "hard":{
     defaultx=6
-    defaulty=4
+    defaulty=3
   }
 }
 
@@ -60,38 +63,64 @@ enemyMap = [
 
   fireBulletTimerDefault = 100;
   fireBulletTimer = this.fireBulletTimerDefault;
- 
-
-
+  
+  // Constructor to initialize the EnemyController passing canvas,enemyBulletController,playerBulletController,x,y 
   constructor(canvas,enemyBulletController,playerBulletController,x,y){
     this.canvas=canvas;
   this.x=x;
   this.y=y;
     this.enemyBulletController=enemyBulletController
 
+    // Initialize an audio element for enemy destruction sounds
     this.enemySound=new Audio("../Assets/enemy-death.wav")
     this.enemySound.volume=0.5;
 
+    // Creating the initial enemy configuration 
     this.createEnemies();
+
+     // Reference added to the player's bullet controller
     this.playerBulletController= playerBulletController;
   }
+
+   // Main function for drawing and controlling enemies
   draw(ctx) {
+    // Decrement the move down timer
     this.decrementMoveDownTimer()
+
+    // Update enemy velocity and direction
     this.updateVelocityAndDirection()
+
+// Checking the  collision detection between player bullets and enemies
     this.collisionDetection()
+
+// Drawing the enemies on the canvas
     this.drawEnemies(ctx)
+    
+        // Reset the move down timer
     this.resetMoveDownTimer()
+
+     // Make enemies fire bullets
     this.fireBullet()
+
+
     // console.log(this.moveDownTimer);
   }
 
+  // Handle collision detection between player bullets and enemies
   collisionDetection(){
     this.enemyRow.forEach((enemyRow)=>{
       enemyRow.forEach((enemy,enemyIndex)=>{
         if(this.playerBulletController.collideWith(enemy)){
+
+           // Plays an enemy destruction sound
           this.enemySound.currentTime=0;
           this.enemySound.play();
+
+
+           // Remove the enemy from the row and update the score
           enemyRow.splice(enemyIndex,1);
+
+             // Remove the previous score from session storage and updating it
           sessionStorage.removeItem("score");
           score++;
         console.log("score: ", score);
@@ -99,39 +128,53 @@ enemyMap = [
         }
       });
     });
+
+     // If the player reaches a certain score, then it open the win page
     if(score==60){
       window.open("../winPage/winPage.html","_self")
     }
   }
 
+  // Handle enemy bullet firing
   fireBullet(){
     this.fireBulletTimer--;
+
+     // Check if it's time to fire a bullet
     if(this.fireBulletTimer <=0){
       this.fireBulletTimer = this.fireBulletTimerDefault;
+
+      // Select a random enemy to shoot from all available enemies
       const allEnemies = this.enemyRow.flat();
       const enemyIndex = Math.floor(Math.random()*allEnemies.length);
       const enemy = allEnemies[enemyIndex];
+
+      // Make the enemy controller shoot a bullet
       this.enemyBulletController.shoot(enemy.x + enemy.width/2,enemy.y,-3)
     }
   }
+
+  // Reset the move down timer if needed
   resetMoveDownTimer(){
     if(this.moveDownTimer <=0){
       this.moveDownTimer = this.moveDownTimerDefault;
     }
   }
 
-
+// Decrement the move down timer if they all are moving down
   decrementMoveDownTimer(){
     if(this.currentDirection === MovingDirection.downLeft || this.currentDirection === MovingDirection.downRight){
       this.moveDownTimer--;
     }
   }
 
+  // Update the enemy movement direction and velocities
   updateVelocityAndDirection() {
     for (const enemyRow of this.enemyRow) {
       if (enemyRow.length === 0) {
         continue; // Skip empty rows
       }
+
+
       if (this.currentDirection == MovingDirection.right) {
         this.xVelocity = this.defaultXVelocity;
         this.yVelocity = 0;
@@ -160,6 +203,7 @@ enemyMap = [
     }
   }
 
+    // Move the enemies down when needed
 moveDown(newDirection){
   this.xVelocity=0;
   this.yVelocity=this.defaultYVelocity;
@@ -173,7 +217,7 @@ moveDown(newDirection){
 
 
 
-
+// Draw the enemy sprites on the canvas
 
   drawEnemies(ctx){
     this.enemyRow.flat().forEach((enemy)=>{
@@ -184,7 +228,7 @@ moveDown(newDirection){
 
 
 
-
+// Create initial enemy configurations based on the enemyMap
 
   createEnemies(){
   
@@ -200,6 +244,7 @@ moveDown(newDirection){
     });
   }
 
+  // Check if any of the enemies collide with a sprite
   
 collideWith(sprite) {
 return this.enemyRow.flat().some((enemy)=>enemy.collideWith(sprite))

@@ -1,3 +1,4 @@
+/* For whole body background image added  */
 .body{
   display: flex;
   align-items: center;
@@ -8,6 +9,8 @@ canvas{
   /* width: 100%;
   height: 98vh; */
 }
+
+/* Setting the heart positioning on the canvas  */
 .heart{
   position: fixed;
   margin-top: 450px;

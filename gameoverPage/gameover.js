@@ -20,3 +20,12 @@ if (score !== null) {
 
 var backgroundAudio = new Audio("../Assets/mixkit-arcade-space-shooter-dead-notification-272.wav")
 backgroundAudio.play();
+
+
+document.addEventListener("keydown", function (event) {
+    // Check if the pressed key is the "Enter" key (key code 13)
+    if (event.keyCode === 13) {
+      // If "Enter" key is pressed, simulate a click on the 'Play Again' button
+      play_again.click();
+    }
+  });
